@@ -1,5 +1,5 @@
 <?php
-require_once 'db_connect.php'; // Подключаем БД
+require_once 'db_connect.php';   // Connecting the DB
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_id'])) {
     $userId = (int)$_POST['user_id'];

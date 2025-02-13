@@ -1,7 +1,7 @@
 <?php
-require_once 'db_connect.php'; // Подключаем файл с БД
+require_once 'db_connect.php'; // Connecting a file with a database
 
-// Получаем список пользователей с транзакциями
+// Get a list of users with transactions
 $query = "SELECT DISTINCT users.id, users.name FROM users
           JOIN user_accounts ON users.id = user_accounts.user_id
           JOIN transactions ON user_accounts.account_number IN (transactions.from_account, transactions.to_account)";
